@@ -30,7 +30,13 @@ module.exports = {
           presets: ['es2015'],
           plugins: ['transform-runtime']
         }
-      }
+      },
+	{
+	  test: /\.(svg|gif|png|eot|woff|ttf|jpg)$/,
+	  loaders: [
+	    'url-loader'
+	  ]
+	}
     ]
   }
 }
