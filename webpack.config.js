@@ -31,12 +31,14 @@ module.exports = {
           plugins: ['transform-runtime']
         }
       },
+
 	{
 	  test: /\.(svg|gif|png|eot|woff|ttf|jpg)$/,
 	  loaders: [
 	    'url-loader'
 	  ]
 	}
+
     ]
   }
 }
