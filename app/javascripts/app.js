@@ -98,7 +98,7 @@ window.App = {
           let bidder = res.args.bidder
           let bidMessage = res.args.message;
           auction.bids(bidder).then(function(bidAmount){
-              bid.innerHTML= "<i>" + bidder + "</i> " + "bid: <b>" + web3.fromWei(bidAmount, 'ether') + " ETH</b> with the message \"" + bidMessage + "\""
+              bid.innerHTML= "<i>" + bidder + "</i> " + "bid: <b>" + web3.fromWei(bidAmount, 'ether') + " ETH</b><br>with the message \"" + bidMessage + "\""
               bidsElement.appendChild(bid)
           }).catch(function(e){
               console.log(e)
