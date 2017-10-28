@@ -35,7 +35,7 @@ window.App = {
       }
 
       if (accs.length == 0) {
-        alert("Couldn't get any accounts; you are probably not signed into your wallet app!");
+        alert("Couldn't get any accounts; you are probably not signed into your wallet app! Use myetherwallet.com or another app to transfer ether to this contract address.");
         //return;
       }
 
@@ -112,7 +112,7 @@ window.App = {
       web3.eth.getBlock('latest', function(err, latestBlock){
           auction.endTime.call().then(function(result){
               var timeLeft = (result - latestBlock.timestamp)/60
-              timeElement.textContent = timeLeft.toString()
+              timeElement.textContent = parseFloat(Math.round(timeLeft * 100) / 100).toFixed(2).toString()
           })
       })
   },
