@@ -30,12 +30,12 @@ window.App = {
     // Get the initial account balance so it can be displayed.
     web3.eth.getAccounts(function(err, accs) {
       if (err != null) {
-        alert("There was an error fetching your accounts.");
+        alert("There was an error fetching your accounts. Do you have a wallet app like Metamask installed?");
         //return;
       }
 
       if (accs.length == 0) {
-        alert("Couldn't get any accounts! Make sure your Ethereum client is configured correctly.");
+        alert("Couldn't get any accounts; you are probably not signed into your wallet app!");
         //return;
       }
 
